@@ -19,7 +19,7 @@ public class TestWebSocketController {
     @RequestMapping(method = RequestMethod.POST)
     public void testWebSocket() {
 
-        String host = "127.0.0.1";
+        String host = "0.0.0.0";
         int port = 8887;
 
         WebSocketServer server = new SimpleServer(new InetSocketAddress(host, port));
@@ -32,7 +32,10 @@ public class TestWebSocketController {
     public void testConnectWebSocket() {
 
         try {
-            WebSocketClient client = new EmptyClient(new URI("ws://localhost:8887"));
+
+            String host = "ws://127.0.0.1:8887";
+
+            WebSocketClient client = new EmptyClient(new URI(host));
             client.connect();
         } catch (Exception e) {
             e.printStackTrace();
