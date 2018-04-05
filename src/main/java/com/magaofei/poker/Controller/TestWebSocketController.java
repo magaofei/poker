@@ -20,7 +20,7 @@ public class TestWebSocketController {
     public void testWebSocket() {
 
         String host = "0.0.0.0";
-        int port = 8887;
+        int port = 8080;
 
         WebSocketServer server = new SimpleServer(new InetSocketAddress(host, port));
         server.run();
@@ -33,7 +33,7 @@ public class TestWebSocketController {
 
         try {
 
-            String host = "ws://127.0.0.1:8887";
+            String host = "ws://127.0.0.1:8080";
 
             WebSocketClient client = new EmptyClient(new URI(host));
             client.connect();
