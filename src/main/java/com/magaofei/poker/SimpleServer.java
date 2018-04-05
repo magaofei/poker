@@ -8,6 +8,15 @@ import java.net.InetSocketAddress;
 
 public class SimpleServer extends WebSocketServer {
 
+//
+//    @EventListener(ApplicationReadyEvent.class)
+//    public void open() {
+//        String host = "127.0.0.1";
+//        int port = 8887;
+//
+//        WebSocketServer server = new SimpleServer(new InetSocketAddress(host, port));
+//        server.run();
+//    }
     /**
      * 构造方法
      * @param address 传入一个地址

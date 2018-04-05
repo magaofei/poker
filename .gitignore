@@ -4,6 +4,7 @@ target/
 .mvn/
 mvnw
 mvnw.cmd
+out/
 # Log file
 *.log
 
